@@ -1,0 +1,484 @@
+//colors
+$header-footer-background: #000000;
+$header-footer-text: #ffffff;
+$background: #2d2332;
+$text: #ffffff;
+$like: #ff7676;
+$viwed: #7c76a3;
+$black: #000000;
+$white: #ffffff;
+$picture-back: #f00;
+$post_background: #000000;
+$like: #ff7676;
+$viwed: #7c76a3;
+
+//sizes
+$header-footer-size: 150px;
+$container-size: 90%;
+$picture-size: 80px;
+$logo-text-size: 72px;
+$footer-text-size: 38px;
+$text-body-size: 20px;
+$big-text: 50px;
+
+// font connection
+@font-face {
+    font-family: "Comfortaa-reg";
+    src: url("/fonts/Comfortaa-Regular.ttf");
+}
+
+//deleting all styles
+* {
+    font-family: "Comfortaa-reg";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+html {
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: $background;
+}
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+a:any-link {
+    text-decoration: none;
+}
+
+//setting for header and footer
+header,
+footer {
+    min-height: $header-footer-size;
+    height: fit-content;
+    background-color: $header-footer-background;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    > a {
+        color: $header-footer-text;
+    }
+    > p {
+        color: $header-footer-text;
+    }
+    > div {
+        display: flex;
+        align-items: center;
+    }
+    > .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+//only header
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 50px 0;
+    min-height: fit-content;
+    >.header__menu{
+        margin: 10px 0 0 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        >a,p{
+            color: $header-footer-text;
+            font-size: 25px;
+        }
+        >a{
+            &:hover{
+                color: $viwed;
+            }
+        }
+        a:nth-child(1){
+            width: 100%;
+            text-align: start;
+        }
+        a:nth-child(2){
+            text-align: center;
+            width: 100%;
+        }
+        a:nth-child(3){
+            text-align: end;
+            width: 100%;
+        }
+    }
+}
+//margin footer
+footer {
+    margin: 50px 0 0 0;
+}
+
+//picture blank
+.user_pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $picture-back;
+    width: $picture-size;
+    height: $picture-size;
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+    > img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+.site_logo {
+    width: fit-content;
+    > p {
+        color: $text;
+        font-size: $logo-text-size;
+    }
+}
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 65px;
+
+    > img {
+        height: 100%;
+        width: 100%;
+    }
+}
+.footer_links {
+    > a:any-link {
+        all: unset;
+        color: $header-footer-text;
+        font-size: $footer-text-size;
+        margin: 0 50px 0 0;
+    }
+}
+.post:not(:last-child) {
+    margin: 0 0 40px 0;
+}
+
+//post
+
+.post {
+    display: flex;
+    flex-direction: column;
+    background-color: $post_background;
+    border-radius: 15px;
+    padding: 10px;
+    width: 80%;
+
+    > .post_head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+        margin: 0 0 20px 0;
+        > .author_logo_name {
+            display: flex;
+            align-items: center;
+            > p {
+                font-size: 30px;
+                color: $text;
+            }
+            > img {
+                width: 70px;
+                height: 70px;
+                background-color: $picture-back;
+                border-radius: 100%;
+                overflow: hidden;
+                margin: 0 20px 0 0;
+            }
+        }
+        > .subscribe_button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 250px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .subscribe {
+            background-color: $white;
+        }
+        > .subscribe::after {
+            content: "Подписаться";
+            color: $black;
+            font-size: 200%;
+        }
+        > .subscribed {
+            background-color: $background;
+            border: 4px solid $white;
+        }
+        > .subscribed::after {
+            content: "Отписаться";
+            color: $white;
+            font-size: 200%;
+        }
+        > .edit {
+            padding: 10px;
+            width: 250px;
+            background-color: $white;
+        }
+        > .edit::after {
+            content: "Изменить";
+            color: $black;
+            font-size: 200%;
+        }
+    }
+    > .post_body {
+        display: flex;
+        width: 100%;
+        border: $white solid 4px;
+        height: fit-content;
+        border-radius: 10px;
+        padding: 15px;
+        flex-direction: column;
+
+        > p {
+            font-size: $text-body-size;
+            color: $text;
+            word-wrap: normal;
+            line-height: 33px;
+            word-break: break-all;
+        }
+        > .image {
+            width: 500px;
+            height: 350px;
+            margin: 15px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 3px solid $white;
+            border-radius: 15px;
+            > img {
+                width: 100%;
+            }
+        }
+    }
+    > .post_footer {
+        display: flex;
+        margin: 15px 20px 5px;
+        align-items: center;
+        > div {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 35px;
+            height: 35px;
+        }
+        > .likes {
+            > p {
+                color: $like;
+                font-size: 25px;
+            }
+            margin: 0 20px 0 0;
+        }
+        > .view {
+            > p {
+                color: $viwed;
+                font-size: 25px;
+            }
+        }
+    }
+    //only for creator page
+    > .back_type {
+        background-color: $white;
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        > .typing {
+            all: unset;
+            display: block;
+            font-size: $text-body-size;
+            color: $black !important;
+            word-wrap: normal;
+            line-height: 33px;
+            min-height: 50px;
+            height: fit-content;
+            color: $white;
+            word-break: break-all;
+            padding: 5px;
+            width: calc(100% - 48px);
+        }
+        > .send_button {
+            min-width: 48px;
+            min-height: 48px;
+            cursor: pointer;
+        }
+    }
+}
+
+.contact_page {
+    .post_body {
+        display: flex;
+        align-items: center;
+    }
+    >a:any-link, a{
+        padding: 10px;
+        border: $white solid 4px;
+        border-radius: 8px;
+        color: $white;
+        font-size: 40px;
+    }
+    img {
+        width: 20%;
+        aspect-ratio: 1 / 1;
+    }
+    img:last-child {
+        cursor: pointer;
+    }
+}
+.centered {
+    width: 100%;
+    text-align: center;
+}
+.big_text {
+    font-size: $big-text !important;
+    margin: 15px;
+}
+.settings_block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.block_pictureChange {
+    width: 30%;
+    background-color: $white;
+    border: $black 11px solid;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    > img {
+        background-color: $picture-back;
+        width: 80%;
+        
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+    }
+    > p {
+        color: $black;
+        font-size: 50px;
+    }
+    > div {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: $black;
+        // border: $black solid 8px;
+        border-radius: 15px;
+        > p {
+            font-size: 35px;
+            color: $white;
+        }
+    }
+}
+
+.block_buttonsInSettings {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > div {
+        transition: 0.2s;
+        width: 100%;
+        background-color: $white;
+        height: 20%;
+        border-radius: 15px;
+        border: 10px solid $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > p {
+            transition: 0.2s;
+            font-size: 35px;
+        }
+    }
+    .delete_profile:hover {
+        transition: 0.2s;
+        background-color: #6c0000;
+        > p {
+            transition: 0.2s;
+            color: $white;
+            pointer-events: painted;
+        }
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: $container-size;
+}
+
+
+
+@media(max-width: 1024px){
+    .block_pictureChange {
+
+        > p {
+            font-size: 150%;
+        }
+        > div {
+            > p {
+                font-size: 150%;
+                color: $white;
+            }
+        }
+    }
+    .block_buttonsInSettings {
+        > div {
+            > p {
+                font-size: 150%;
+            }
+        }
+    }
+    .contact_page {
+        >a:any-link, a{
+            padding: 10px;
+            border: $white solid 4px;
+            border-radius: 8px;
+            color: $white;
+            font-size: 120%;
+        }
+        img {
+            width: 60%;
+            aspect-ratio: 1 / 1;
+        }
+        img:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 840px){
+    .site_logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        >img{
+            aspect-ratio: 1 / 1;
+            height: 100%;
+        }
+    }
+}
