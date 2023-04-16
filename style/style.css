@@ -88,22 +88,26 @@ header > .header__menu {
   height: 100%;
   justify-content: center;
 }
-header > .header__menu > a, header > .header__menu p {
+header > .header__menu > a,
+header > .header__menu p {
   color: #ffffff;
   font-size: 25px;
 }
 header > .header__menu > a:hover {
   color: #7c76a3;
 }
-header > .header__menu a:nth-child(1) {
+header > .header__menu a:nth-child(1),
+header > .header__menu p:nth-child(1) {
   width: 100%;
   text-align: start;
 }
-header > .header__menu a:nth-child(2) {
+header > .header__menu a:nth-child(2),
+header > .header__menu p:nth-child(2) {
   text-align: center;
   width: 100%;
 }
-header > .header__menu a:nth-child(3) {
+header > .header__menu a:nth-child(3),
+header > .header__menu p:nth-child(3) {
   text-align: end;
   width: 100%;
 }
@@ -205,6 +209,7 @@ footer {
   border-radius: 100%;
   overflow: hidden;
   margin: 0 20px 0 0;
+  aspect-ratio: 1/1 !important;
 }
 .post > .post_head > .subscribe_button {
   display: flex;
@@ -218,7 +223,7 @@ footer {
 .post > .post_head .subscribe {
   background-color: #ffffff;
 }
-.post > .post_head > .subscribe::after {
+.post > .post_head .subscribe::after {
   content: "Подписаться";
   color: #000000;
   font-size: 200%;
@@ -345,7 +350,8 @@ footer {
   color: #ffffff;
   font-size: 40px;
 }
-.contact_page > a:any-link, .contact_page a {
+.contact_page > a:any-link,
+.contact_page a {
   padding: 10px;
   border: #ffffff solid 4px;
   border-radius: 8px;
@@ -473,7 +479,8 @@ footer {
     color: #ffffff;
     font-size: 120%;
   }
-  .contact_page > a:any-link, .contact_page a {
+  .contact_page > a:any-link,
+.contact_page a {
     padding: 10px;
     border: #ffffff solid 4px;
     border-radius: 8px;
@@ -498,5 +505,78 @@ footer {
   .site_logo > img {
     aspect-ratio: 1/1;
     height: 100%;
+  }
+  .header__info {
+    flex-direction: column;
+  }
+  .header__info > p {
+    text-align: center !important;
+    margin: 5px 0;
+  }
+  .author_logo_name > p {
+    word-break: break-all;
+  }
+  .subscribe_button {
+    aspect-ratio: 1/1;
+    max-width: 50px;
+    margin: 10px 0;
+  }
+  .subscribe {
+    background-color: #ffffff;
+  }
+  .subscribe::after {
+    content: "+" !important;
+    color: #000000;
+    font-size: 200%;
+  }
+  .subscribed {
+    background-color: #2d2332;
+    border: 4px solid #ffffff;
+  }
+  .subscribed::after {
+    content: "-" !important;
+    color: #ffffff;
+    font-size: 200%;
+  }
+  .edit {
+    border: #ffffff 4px solid;
+    background-color: #000000 !important;
+  }
+  .edit::after {
+    display: none;
+  }
+  .edit > img {
+    aspect-ratio: 1.6/1;
+    width: 50px;
+  }
+}
+@media (max-width: 420px) {
+  .header__menu {
+    flex-direction: column;
+  }
+  .header__menu > a {
+    text-align: center !important;
+    margin: 5px 0;
+  }
+  .post_head, .post_footer {
+    flex-direction: column;
+    margin: 0;
+  }
+  .post_head > .author_logo_name, .post_footer > .author_logo_name {
+    flex-direction: column;
+  }
+  .post_head > .author_logo_name > img, .post_footer > .author_logo_name > img {
+    margin: 0 !important;
+  }
+}
+@media (max-width: 319px) {
+  header,
+main,
+footer {
+    display: none;
+  }
+  body::after {
+    content: "Ваше устройство не поддерживается :(";
+    color: #ffffff;
   }
 }/*# sourceMappingURL=style.css.map */
