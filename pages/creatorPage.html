@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/prostopost/style/style.css">
-    <script defer src="/prostopost/script/js.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <script defer src="/script/js.js"></script>
+    <script defer src="/script/creator.js"></script>
+    <script defer src="/script/author.js"></script>
     <title>Feed</title>
 </head>
+
 <body>
     <header>
-    <div class="container">
-        <a href="/prostopost/pages/creatorPage.html" class="user_pic">
-            <img src="" alt="userpic">
-        </a>
-        <div class="site_logo">
-            <p>ПРОСТО ПОСТ</p>
+        <div class="container">
+            <a href="/pages/creatorPage.html" class="user_pic">
+                <img src="" alt="userpic">
+            </a>
+            <div class="site_logo">
+                <p>ПРОСТО ПОСТ</p>
+            </div>
+            <a href="/pages/settings.html" class="settings">
+                <img src="/content/settings.svg" alt="">
+            </a>
         </div>
-        <a href="/prostopost/pages/settings.html" class="settings">
-            <img src="/prostopost/content/settings.svg" alt="">
-        </a>
-    </div>
-    <div class="container header__menu">
-        <a href="/prostopost/index.html">Главная</a>
-        <a href="/prostopost/subscribed.html">Лента</a>
-        <a href="/prostopost/sublist.html">Подписки</a>
-    </div>
+        <div class="container header__menu">
+            <!-- Ссылка на главную страницу сайта -->
+            <a href="/index.html">Главная</a>
+            <!-- Ссылка на страницу с лентой новостей -->
+            <a href="/pages/subscribed.html">Лента</a>
+            <!-- Ссылка на страницу со списком подписок пользователя -->
+            <a href="/pages/sublist.html">Подписки</a>
+        </div>
+        <div class="container header__menu header__info">
+            <p>Подписчиков: 400</p>
+            <p>Лайков: ???</p>
+            <p>Просмотров: ???</p>
+        </div>
     </header>
     <main class="container">
-        <div class="post type">
-            <div class="back_type">
-                <div class="typing" contenteditable="true">
+        <div class="post type" contenteditable="true">
+            <div class="back_type" contenteditable="true">
+                <div class="typing"></div>
+                <div class="send_button"><img src="/content/send.svg" alt="" srcset=""></div>
 
-                </div>
-                <div class="send_button"><img src="/prostopost/content/send.svg" alt="" srcset=""></div>
-                
             </div>
-        </div>  
+        </div>
         <div class="post">
             <div class="post_head">
                 <a href="#" class="author_logo_name">
@@ -46,26 +56,36 @@
                 <div class="subscribe_button edit"></div>
             </div>
             <div class="post_body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque illum, at itaque esse sed magnam excepturi, temporibus minima eum quidem doloremque. Placeat voluptatem beatae voluptatibus possimus incidunt sapiente, laboriosam et!
-                Reprehenderit voluptate neque debitis reiciendis rem illum eos mollitia nihil. Temporibus voluptate, dolore iste vero illum assumenda a placeat non fugiat iusto nihil quam tempore? Nostrum laboriosam laborum qui iste?
-                Voluptate corrupti accusamus vero necessitatibus, facilis nam modi in quam blanditiis debitis cumque eum. Fugit inventore, corrupti, vero itaque fugiat possimus dolore hic ipsum voluptatem vel quisquam soluta repellendus perspiciatis.
-                Voluptatum sed aut aliquid deserunt quod ut fugit magnam! Quaerat saepe ad iste vitae dolorum, doloremque aliquid quisquam dolores unde veritatis, molestiae praesentium et incidunt at reiciendis, in dignissimos inventore.
-                Quasi quisquam eveniet vero quia ratione praesentium dicta ipsum voluptatum? Sapiente officia adipisci aliquid quidem voluptatum accusamus ipsum consequuntur fugit, quibusdam assumenda, nesciunt mollitia tempora eaque ipsam minus asperiores iste.
-            </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque illum, at itaque esse sed magnam
+                    excepturi, temporibus minima eum quidem doloremque. Placeat voluptatem beatae voluptatibus possimus
+                    incidunt sapiente, laboriosam et!
+                    Reprehenderit voluptate neque debitis reiciendis rem illum eos mollitia nihil. Temporibus voluptate,
+                    dolore iste vero illum assumenda a placeat non fugiat iusto nihil quam tempore? Nostrum laboriosam
+                    laborum qui iste?
+                    Voluptate corrupti accusamus vero necessitatibus, facilis nam modi in quam blanditiis debitis cumque
+                    eum. Fugit inventore, corrupti, vero itaque fugiat possimus dolore hic ipsum voluptatem vel quisquam
+                    soluta repellendus perspiciatis.
+                    Voluptatum sed aut aliquid deserunt quod ut fugit magnam! Quaerat saepe ad iste vitae dolorum,
+                    doloremque aliquid quisquam dolores unde veritatis, molestiae praesentium et incidunt at reiciendis,
+                    in dignissimos inventore.
+                    Quasi quisquam eveniet vero quia ratione praesentium dicta ipsum voluptatum? Sapiente officia
+                    adipisci aliquid quidem voluptatum accusamus ipsum consequuntur fugit, quibusdam assumenda, nesciunt
+                    mollitia tempora eaque ipsam minus asperiores iste.
+                </p>
             </div>
             <div class="post_footer">
                 <div class="likes">
-                    <img src="/prostopost/content/like.svg" alt="">
+                    <img src="/content/like.svg" alt="">
                     <p>88888</p>
                 </div>
                 <div class="view">
-                    <img src="/prostopost/content/viewed.svg" alt="">
+                    <img src="/content/viewed.svg" alt="">
                     <p>88888</p>
                 </div>
             </div>
         </div>
 
-        
+
         <div class="post">
             <div class="post_head">
                 <a href="#" class="author_logo_name">
@@ -75,33 +95,42 @@
                 <div class="subscribe_button edit"></div>
             </div>
             <div class="post_body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque illum, at itaque esse sed magnam excepturi, temporibus minima eum quidem doloremque. Placeat voluptatem beatae voluptatibus possimus incidunt sapiente, laboriosam et!
-                Reprehenderit voluptate neque debitis reiciendis rem illum eos mollitia nihil. Temporibus voluptate, dolore iste vero illum assumenda a placeat non fugiat iusto nihil quam tempore? Nostrum laboriosam laborum qui iste?
-                Voluptate corrupti accusamus vero necessitatibus, facilis nam modi in quam blanditiis debitis cumque eum. Fugit inventore, corrupti, vero itaque fugiat possimus dolore hic ipsum voluptatem vel quisquam soluta repellendus perspiciatis.
-                Voluptatum sed aut aliquid deserunt quod ut fugit magnam! Quaerat saepe ad iste vitae dolorum, doloremque aliquid quisquam dolores unde veritatis, molestiae praesentium et incidunt at reiciendis, in dignissimos inventore.
-                Quasi quisquam eveniet vero quia ratione praesentium dicta ipsum voluptatum? Sapiente officia adipisci aliquid quidem voluptatum accusamus ipsum consequuntur fugit, quibusdam assumenda, nesciunt mollitia tempora eaque ipsam minus asperiores iste.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque illum, at itaque esse sed magnam
+                    excepturi, temporibus minima eum quidem doloremque. Placeat voluptatem beatae voluptatibus possimus
+                    incidunt sapiente, laboriosam et!
+                    Reprehenderit voluptate neque debitis reiciendis rem illum eos mollitia nihil. Temporibus voluptate,
+                    dolore iste vero illum assumenda a placeat non fugiat iusto nihil quam tempore? Nostrum laboriosam
+                    laborum qui iste?
+                    Voluptate corrupti accusamus vero necessitatibus, facilis nam modi in quam blanditiis debitis cumque
+                    eum. Fugit inventore, corrupti, vero itaque fugiat possimus dolore hic ipsum voluptatem vel quisquam
+                    soluta repellendus perspiciatis.
+                    Voluptatum sed aut aliquid deserunt quod ut fugit magnam! Quaerat saepe ad iste vitae dolorum,
+                    doloremque aliquid quisquam dolores unde veritatis, molestiae praesentium et incidunt at reiciendis,
+                    in dignissimos inventore.
+                    Quasi quisquam eveniet vero quia ratione praesentium dicta ipsum voluptatum? Sapiente officia
+                    adipisci aliquid quidem voluptatum accusamus ipsum consequuntur fugit, quibusdam assumenda, nesciunt
+                    mollitia tempora eaque ipsam minus asperiores iste.</p>
             </div>
             <div class="post_footer">
                 <div class="likes">
-                    <img src="/prostopost/content/like.svg" alt="">
+                    <img src="/content/like.svg" alt="">
                     <p>888</p>
                 </div>
                 <div class="view">
-                    <img src="/prostopost/content/viewed.svg" alt="">
+                    <img src="/content/viewed.svg" alt="">
                     <p>888</p>
                 </div>
             </div>
         </div>
     </main>
-       <footer>
+    <footer>
         <div class="container">
             <div class="footer_links">
-                <a href="/prostopost/pages/about.html">О нас</a>
-                <a href="/prostopost/pages/contact.html">Контакты</a>
+                <a href="/pages/about.html">О нас</a>
+                <a href="/pages/contact.html">Контакты</a>
             </div>
         </div>
     </footer>
 </body>
 
 </html>
-    

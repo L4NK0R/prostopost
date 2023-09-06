@@ -5,26 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
     <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/contactpage.css">
     <script defer src="/script/js.js"></script>
-    <script defer src="/script/contact.js"></script>
+    <title>Feed</title>
 </head>
 
 <body>
+    <!-- Элемент header - верхний заголовок страницы -->
     <header>
+        <!-- Элемент div с классом "container" для создания блока с фиксированной шириной -->
         <div class="container">
+            <!-- Ссылка на страницу создания контента с классом "user_pic" и изображением аватара пользователя -->
             <a href="/pages/creatorPage.html" class="user_pic">
                 <img src="" alt="userpic">
             </a>
+            <!-- Блок с классом "site_logo" и текстом "ПРОСТО ПОСТ" - логотип сайта -->
             <div class="site_logo">
                 <p>ПРОСТО ПОСТ</p>
             </div>
+            <!-- Ссылка на страницу настроек с классом "settings" и изображением иконки настроек -->
             <a href="/pages/settings.html" class="settings">
                 <img src="/content/settings.svg" alt="">
             </a>
         </div>
+        <!-- Элемент div с классом "container header__menu" для создания блока с фиксированной шириной и классом "header__menu" -->
         <div class="container header__menu">
             <!-- Ссылка на главную страницу сайта -->
             <a href="/index.html">Главная</a>
@@ -35,18 +39,18 @@
         </div>
     </header>
     <main class="container">
+        <!-- Начало поста -->
         <div class="post">
-            <div class="post_body">
-                <p class="centered big_text"> Контакты</p>
+            <div class="post_head">
+                <a href="/pages/pupa.html" class="author_logo_name">
+                    <img src="" alt="">
+                    <p>Пупа</p>
+                </a>
+                <!-- Кнопка подписки с классом "subscribed" -->
+                <div class="subscribe_button subscribed"></div>
             </div>
         </div>
-        <div class="post contact_page">
-            <div class="post_body">
-                <img class="matrix_qr" src="/content/matrix.svg" alt="">
-                <img src="/content/matrix_qr.svg" alt="">
-                <a href="https://matrix.org/">Перейти к контакту</a>
-            </div>
-        </div>
+        <!-- Конец поста -->
     </main>
     <footer>
         <div class="container">
