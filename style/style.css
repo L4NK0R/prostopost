@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Comfortaa-reg";
-  src: url("/fonts/Comfortaa-Regular.ttf");
+  src: url("/prostopost/fonts/Comfortaa-Regular.ttf");
 }
 * {
   font-family: "Comfortaa-reg";
