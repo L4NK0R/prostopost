@@ -3,7 +3,7 @@ let settings_button = document.querySelector('.settings');
 let subscribe_button = document.querySelectorAll('.subscribe_button');
 let like_button = document.querySelectorAll('.likes > img');
 like_button.forEach(item => item.addEventListener('click', like));
-siteLogoReffer.addEventListener('click', function () { document.location.href = "/index.html" });
+siteLogoReffer.addEventListener('click', function () { document.location.href = "/prostopost/index.html" });
 settings_button.addEventListener('mouseover', RotateSettingsButton);
 subscribe_button.forEach(item => item.addEventListener('click', subscribeAction));
 
@@ -11,7 +11,7 @@ window.addEventListener("resize", screen);
 
 function screen(){
     if (window.innerWidth < 840) {
-        document.querySelector('.site_logo').innerHTML = `<img src="/content/mobile.svg">`;
+        document.querySelector('.site_logo').innerHTML = `<img src="/prostopost/content/mobile.svg">`;
     }
 }
 // like_button.forEach(item => likeRounder(item));
@@ -50,11 +50,11 @@ function RotateSettingsButton() {
 //edited
 function like(ev) {
     let likeval = +ev.currentTarget.closest('.likes').querySelector('p').textContent;
-    if ((ev.currentTarget.src == 'http://127.0.0.1:5500/content/like.svg') && !(ev.currentTarget.closest('.post').querySelector('.subscribe_button').classList.contains('edit'))) {
-        ev.currentTarget.src = 'http://127.0.0.1:5500/content/liked.svg';
+    if ((ev.currentTarget.src == '/prostopost/content/like.svg') && !(ev.currentTarget.closest('.post').querySelector('.subscribe_button').classList.contains('edit'))) {
+        ev.currentTarget.src = '/prostopost/content/liked.svg';
         ev.currentTarget.closest('.likes').querySelector('p').textContent = +likeval + 1;
     } else {
-        ev.currentTarget.src = 'http://127.0.0.1:5500/content/like.svg';
+        ev.currentTarget.src = '/prostopost/content/like.svg';
         ev.currentTarget.closest('.likes').querySelector('p').textContent = +likeval - 1;
     }
 }
@@ -71,10 +71,8 @@ function subscribeAction(ev) {
 function editAction(ev){
     if(ev.currentTarget.closest('.post').querySelector('.post_body > p').contentEditable == 'true'){
         ev.currentTarget.closest('.post').querySelector('.post_body > p').contentEditable = 'false';
-        console.log('ffff');
     }else{
         ev.currentTarget.closest('.post').querySelector('.post_body > p').contentEditable = 'true';
-        console.log('dddd');
     }
     // console.log(postText);
 }
